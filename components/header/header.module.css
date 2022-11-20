@@ -1,0 +1,21 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+    align-items: flex-end;
+}
+
+.left > img {
+    height: 6rem;
+    margin-top: -10px;
+    margin-right: 20px;
+}
+
+.left > span{
+    font-size: 4rem;
+    font-weight: bold;
+}

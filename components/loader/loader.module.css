@@ -1,0 +1,46 @@
+.loader {
+    height: 15rem;
+    width: 15rem;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.loading-text {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-text>.neon-text {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow:
+        0 0 2px #fff,
+        0 0 7px #fff,
+        0 0 20px #fff,
+        0 0 28px #0fa,
+        0 0 40px #0fa,
+        0 0 60px #0fa
+}
+
+.loading-text>.sub-text {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 200;
+    text-align: center;
+    padding: 0 5rem;
+}
