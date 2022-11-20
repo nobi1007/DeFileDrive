@@ -6,16 +6,24 @@
 
 .left{
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 60%;
 }
 
-.left > img {
+.logo-title > img {
     height: 6rem;
     margin-top: -10px;
     margin-right: 20px;
 }
 
-.left > span{
+.logo-title> span{
     font-size: 4rem;
     font-weight: bold;
+}
+
+.left > p{
+    font-size: 1.2em;
+    color:#bdbdbd;
+    font-weight: 200; 
 }

@@ -263,8 +263,9 @@ export default function Home() {
     }, [walletConnected]);
 
     const showConnectWalletCTA = !walletConnected || !signerAddress;
-    const isGroupsEmpty = !myGroups || myGroups.length === 0;
+    // const isGroupsEmpty = !myGroups || myGroups.length === 0;
     const isGroupModalOpen = !!groupOpen.id;
+    const isGroupsEmpty = true;
 
     return (
         <PageWrapper
@@ -318,6 +319,67 @@ export default function Home() {
                             </div>
                         ))
                     )}
+                </div>
+                <div className={styles["hiw-container"]}>
+                    <h2>{"How it works?"}</h2>
+                    <ul>
+                        <li>Group creation: </li>
+                        <ol>
+                            <li>
+                                After onboarding user first need to create
+                                group.
+                            </li>
+                            <li>
+                                Hit Create Group Button and provide some unique
+                                groupId/group name.
+                            </li>
+                            <li>
+                                After submitting, Sign the transaction and wait
+                                for you group to be created.
+                            </li>
+                        </ol>
+                    </ul>
+                    <ul>
+                        <li>Add Files: </li>
+                        <ol>
+                            <li>Click on your group.</li>
+                            <li>
+                                After Selecting files, firstly the files are
+                                encrypted using encryption key associated with
+                                the groupId.
+                            </li>
+                            <li>
+                                The encrypted files are then uploaded on IPFS
+                                and then on FileCoin via web.storage’s JS APIS
+                            </li>
+                            <li>
+                                We receive the root CID of the uploaded file.
+                            </li>
+                            <li>
+                                Using this CID we can access the encrypted file
+                                and decrypt it, via the same encryption key, to
+                                show under the Synced Files section.
+                            </li>
+                        </ol>
+                    </ul>
+                    <ul>
+                        <li>Add Friends in the group:</li>
+                        <ol>
+                            <li>Click on your group.</li>
+                            <li>
+                                Hit Add Friend CTA and enter friend’s valid
+                                wallet address
+                            </li>
+                            <li>
+                                After submitting, Sign the transaction and wait
+                                for your friend to get added to the group.
+                            </li>
+                            <li>
+                                Your friend can now see the groups as well as
+                                the files shared with them.
+                            </li>
+                        </ol>
+                    </ul>
                 </div>
                 {isGroupModalOpen && (
                     <ReactModal
