@@ -195,6 +195,9 @@ export default function Home() {
             // getNumberOfWhitelisted();
         } catch (err) {
             console.error(err);
+        } finally {
+            setLoading(false);
+            setLoadingText("");
         }
     };
 
@@ -263,9 +266,8 @@ export default function Home() {
     }, [walletConnected]);
 
     const showConnectWalletCTA = !walletConnected || !signerAddress;
-    // const isGroupsEmpty = !myGroups || myGroups.length === 0;
+    const isGroupsEmpty = !myGroups || myGroups.length === 0;
     const isGroupModalOpen = !!groupOpen.id;
-    const isGroupsEmpty = true;
 
     return (
         <PageWrapper
